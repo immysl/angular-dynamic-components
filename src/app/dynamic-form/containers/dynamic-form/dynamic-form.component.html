@@ -1,4 +1,7 @@
-<form class="dynamic-form" [formGroup]="form">
+<form 
+  class="dynamic-form" 
+  [formGroup]="form"
+  (ngSubmit)="submitForm(form.value)">
   <ng-container
     *ngFor="let config of configList"
     appDynamicField

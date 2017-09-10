@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { DynamicFieldConfig } from '../../models/dynamic-field-config';
@@ -10,6 +10,7 @@ import { DynamicFieldConfig } from '../../models/dynamic-field-config';
 })
 export class DynamicFormComponent implements OnInit {
   @Input() configList: DynamicFieldConfig[] = [];
+  @Output() submitted: EventEmitter<any> = new EventEmitter<any>();
 
   form: FormGroup;
 
@@ -30,6 +31,10 @@ export class DynamicFormComponent implements OnInit {
     );
 
     return group;
+  }
+
+  submitForm(formValues): void {
+    this.submitted.emit(formValues);
   }
 
 }

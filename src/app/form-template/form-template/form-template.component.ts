@@ -19,4 +19,8 @@ export class FormTemplateComponent implements OnInit {
       .subscribe(data => this.configList = data as DynamicFieldConfig[]);
   }
 
+  processForm(formValues): void {
+    console.log(formValues);
+  }
+
 }
