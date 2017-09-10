@@ -7,6 +7,8 @@ import { FormInputComponent } from './components/form-input/form-input.component
 import { FormButtonComponent } from './components/form-button/form-button.component';
 import { FormSelectComponent } from './components/form-select/form-select.component';
 
+import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.directive';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { FormSelectComponent } from './components/form-select/form-select.compon
     DynamicFormComponent,
     FormInputComponent,
     FormButtonComponent,
-    FormSelectComponent
+    FormSelectComponent,
+    DynamicFieldDirective
   ],
   exports: [DynamicFormComponent]
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { DynamicFormConfig } from '../../models/dynamic-form-config';
+import { DynamicFieldConfig } from '../../models/dynamic-field-config';
 
 @Component({
   selector: 'app-form-button',
@@ -9,7 +9,7 @@ import { DynamicFormConfig } from '../../models/dynamic-form-config';
   styleUrls: ['./form-button.component.css']
 })
 export class FormButtonComponent implements OnInit {
-  config: DynamicFormConfig;
+  config: DynamicFieldConfig;
   group: FormGroup;
 
   constructor() { }

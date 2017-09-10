@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DynamicFormConfig } from '../../dynamic-form/models/dynamic-form-config';
+import { DynamicFieldConfig } from '../../dynamic-form/models/dynamic-field-config';
 
 @Component({
   selector: 'app-form-template',
@@ -8,7 +8,7 @@ import { DynamicFormConfig } from '../../dynamic-form/models/dynamic-form-config
   styleUrls: ['./form-template.component.css']
 })
 export class FormTemplateComponent implements OnInit {
-  config: DynamicFormConfig[] = [
+  config: DynamicFieldConfig[] = [
     {
       type: 'input',
       label: 'Full Name',

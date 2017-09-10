@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
-import { DynamicFormConfig } from '../../models/dynamic-form-config';
+import { DynamicFieldConfig } from '../../models/dynamic-field-config';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -9,7 +9,7 @@ import { DynamicFormConfig } from '../../models/dynamic-form-config';
   styleUrls: ['./dynamic-form.component.css']
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() config: DynamicFormConfig[] = [];
+  @Input() config: DynamicFieldConfig[] = [];
 
   form: FormGroup;
 
@@ -22,7 +22,7 @@ export class DynamicFormComponent implements OnInit {
   createGroup(): FormGroup {
     const group = this.formBuilder.group({});
 
-    this.config.forEach((control: DynamicFormConfig) =>
+    this.config.forEach((control: DynamicFieldConfig) =>
       group.addControl(
         control.name,
         this.formBuilder.control(control.options || {})
