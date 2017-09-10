@@ -9,7 +9,7 @@ import { DynamicFieldConfig } from '../../models/dynamic-field-config';
   styleUrls: ['./dynamic-form.component.css']
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() config: DynamicFieldConfig[] = [];
+  @Input() configList: DynamicFieldConfig[] = [];
 
   form: FormGroup;
 
@@ -22,10 +22,10 @@ export class DynamicFormComponent implements OnInit {
   createGroup(): FormGroup {
     const group = this.formBuilder.group({});
 
-    this.config.forEach((control: DynamicFieldConfig) =>
+    this.configList.forEach((control: DynamicFieldConfig) =>
       group.addControl(
         control.name,
-        this.formBuilder.control(control.options || {})
+        this.formBuilder.control('')
       )
     );
 
