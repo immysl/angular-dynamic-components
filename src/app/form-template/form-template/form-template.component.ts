@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../../shared/data.service';
 import { DynamicFieldConfig } from '../../dynamic-form/models/dynamic-field-config';
 
 @Component({
@@ -8,36 +9,14 @@ import { DynamicFieldConfig } from '../../dynamic-form/models/dynamic-field-conf
   styleUrls: ['./form-template.component.css']
 })
 export class FormTemplateComponent implements OnInit {
-  config: DynamicFieldConfig[] = [
-    {
-      type: 'input',
-      label: 'Full Name',
-      name: 'name',
-      placeholder: 'Enter your full name'
-    },
-    {
-      type: 'input',
-      label: 'Email',
-      name: 'email',
-      placeholder: 'Enter your email address'
-    },
-    {
-      type: 'select',
-      label: 'Gender',
-      name: 'gender',
-      options: ['Male', 'Female', 'Can\t specify'],
-      placeholder: 'Select your gender'
-    },
-    {
-      type: 'button',
-      label: 'Submit',
-      name: 'submit'
-    }
-  ];
+  configList: DynamicFieldConfig[];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.dataService
+      .getSimpleForm()
+      .subscribe(data => this.configList = data as DynamicFieldConfig[]);
   }
 
 }
