@@ -1,7 +1,8 @@
 <div class="dynamic-field form-input" [formGroup]="group">
-  <label for="">{{config.label}}</label>
+  <label [attr.for]="config.name">{{config.label}}</label>
   <input 
     type="text"
+    [attr.id]="config.name"
     [attr.placeholder]="config.placeholder"
     [formControlName]="config.name" />
 </div>

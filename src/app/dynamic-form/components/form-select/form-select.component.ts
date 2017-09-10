@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+
+import { DynamicFormConfig } from '../../models/dynamic-form-config';
 
 @Component({
   selector: 'app-form-select',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-select.component.css']
 })
 export class FormSelectComponent implements OnInit {
+  config: DynamicFormConfig;
+  group: FormGroup;
 
   constructor() { }
 
