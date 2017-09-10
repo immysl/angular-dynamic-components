@@ -16,11 +16,18 @@ import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.
   ],
   declarations: [
     DynamicFormComponent,
+    DynamicFieldDirective,
     FormInputComponent,
     FormButtonComponent,
-    FormSelectComponent,
-    DynamicFieldDirective
+    FormSelectComponent
   ],
-  exports: [DynamicFormComponent]
+  entryComponents: [
+    FormInputComponent,
+    FormButtonComponent,
+    FormSelectComponent
+  ],
+  exports: [
+    DynamicFormComponent
+  ]
 })
 export class DynamicFormModule { }
