@@ -16,12 +16,7 @@ import { FormInputComponent } from '../form-input/form-input.component';
 import { FormSelectComponent } from '../form-select/form-select.component';
 
 import { DynamicFieldConfig } from '../../models/dynamic-field-config';
-
-const formComponents = {
-  button: FormButtonComponent,
-  input: FormInputComponent,
-  select: FormSelectComponent
-};
+import { FieldList } from '../../models/field-list';
 
 @Directive({
   selector: '[appDynamicField]'
@@ -38,7 +33,7 @@ export class DynamicFieldDirective implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const component: Type<any> = formComponents[this.config.type];
+    const component: Type<any> = FieldList[this.config.type];
     const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(component);
 
     this.component = this.container.createComponent(factory);
