@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 
 import { DynamicFormComponent } from './containers/dynamic-form/dynamic-form.component';
 import { FormInputComponent } from './components/form-input/form-input.component';
@@ -16,7 +18,9 @@ import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.
     CommonModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ButtonsModule
+    ButtonsModule,
+    InputsModule,
+    DropDownsModule
   ],
   declarations: [
     DynamicFormComponent,
