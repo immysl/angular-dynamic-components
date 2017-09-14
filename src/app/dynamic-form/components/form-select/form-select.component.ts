@@ -6,7 +6,7 @@ import { DynamicFieldConfig } from '../../models/dynamic-field-config';
 @Component({
   selector: 'app-form-select',
   templateUrl: './form-select.component.html',
-  styleUrls: ['./form-select.component.css']
+  styleUrls: ['./form-select.component.scss']
 })
 export class FormSelectComponent implements OnInit {
   config: DynamicFieldConfig;
