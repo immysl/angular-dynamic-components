@@ -1,7 +1,8 @@
 <div class="dynamic-field form-select" [formGroup]="group">
   <label [attr.for]="config.name">{{config.label}}</label>
-  <select [formControlName]="config.name" [attr.id]="config.name">
-    <option value="">{{config.placeholder}}</option>
-    <option *ngFor="let option of config.options">{{option}}</option>
-  </select>
+  <kendo-dropdownlist 
+    [data]="config.options" 
+    [attr.id]="config.name" 
+    [formControlName]="config.name">
+  </kendo-dropdownlist>
 </div>
