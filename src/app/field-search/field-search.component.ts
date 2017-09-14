@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FieldList } from '../dynamic-form/models/field-list';
 
 @Component({
   selector: 'app-field-search',
@@ -6,11 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./field-search.component.scss']
 })
 export class FieldSearchComponent implements OnInit {
-  @Input() componentList: Array<string>;
+  searchList: Array<string>;
 
   constructor() { }
 
   ngOnInit() {
+    this.searchList = Object.keys(FieldList);
   }
 
 }
