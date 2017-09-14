@@ -1,25 +1,25 @@
 [
   {
-    "type": "input",
+    "type": "Input",
     "label": "Full Name",
     "name": "name",
     "placeholder": "Enter your full name"
   },
   {
-    "type": "input",
+    "type": "Input",
     "label": "Email",
     "name": "email",
     "placeholder": "Enter your email address"
   },
   {
-    "type": "select",
+    "type": "Select",
     "label": "Gender",
     "name": "gender",
     "options": ["Male", "Female", "Can't specify"],
     "placeholder": "Select your gender"
   },
   {
-    "type": "button",
+    "type": "Button",
     "label": "Submit",
     "name": "submit"
   }
