@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FieldSearchComponent } from './field-search.component';
+import { FieldFormComponent } from './field-form.component';
 
-describe('FieldSearchComponent', () => {
-  let component: FieldSearchComponent;
-  let fixture: ComponentFixture<FieldSearchComponent>;
+describe('FieldFormComponent', () => {
+  let component: FieldFormComponent;
+  let fixture: ComponentFixture<FieldFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FieldSearchComponent ]
+      declarations: [ FieldFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FieldSearchComponent);
+    fixture = TestBed.createComponent(FieldFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
