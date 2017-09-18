@@ -17,10 +17,5 @@
     "name": "gender",
     "options": ["Male", "Female", "Can't specify"],
     "placeholder": "Select your gender"
-  },
-  {
-    "type": "Button",
-    "label": "Submit",
-    "name": "submit"
   }
 ]
