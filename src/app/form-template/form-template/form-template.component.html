@@ -1,7 +1,5 @@
 <div class="container">
-  <app-dynamic-form 
-    *ngIf="configList" 
-    [configList]="configList"
-    (submitted)="processForm($event)">
-  </app-dynamic-form>
+  <h2>Form Template</h2>
+
+  <app-dynamic-form (submitted)="processForm($event)"></app-dynamic-form>
 </div>
