@@ -27,14 +27,14 @@ export class FieldFormComponent implements OnInit {
     });
   }
 
-  addField(selectedInput: string) {
-    const currentState = this.commonStore.getState();
+  addField(formValues) {
+    const currentState = Object.assign({}, this.commonStore.getState());
 
     currentState.formConfigList.push({
-      type: selectedInput,
-      label: 'Default Label',
-      name: 'default',
-      placeholder: 'Some Placeholder'
+      type: formValues.type,
+      name:  formValues.name || 'default',
+      label: formValues.label || 'Default Label',
+      placeholder: formValues.placeholder || 'Some Placeholder'
     });
 
     this.commonStore.setState(
