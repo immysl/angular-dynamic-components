@@ -1,8 +1,8 @@
-<kendo-textbox-container class="dynamic-field form-input" [formGroup]="group">
+<div class="dynamic-field form-input" [formGroup]="group">
   <label [attr.for]="config.name">{{config.label}}</label>
   <input 
     kendoTextBox
     [attr.id]="config.name"
     [attr.placeholder]="config.placeholder"
     [formControlName]="config.name" />
-</kendo-textbox-container>
+</div>
