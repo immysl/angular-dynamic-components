@@ -1,3 +1,5 @@
+<h2>Form Inventory</h2>
+
 <form [formGroup]="form" (ngSubmit)="addField(form.value)" class="form">
   <div class="form-group">
     <label [for]="fieldType">Field Type</label>
@@ -5,7 +7,6 @@
       #fieldType
       formControlName="type"
       [data]="fieldList"
-      (valueChange)="addField($event)"
       placeholder="e.g. input"
       class="form-control">
     </kendo-autocomplete>
@@ -17,7 +18,7 @@
       kendoTextBox
       #fieldName
       formControlName="name"
-      placeholder"Name of the field" />
+      placeholder="Name of the field" />
   </div>
 
   <div class="form-group">
@@ -26,7 +27,7 @@
       kendoTextBox
       #fieldLabel
       formControlName="label"
-      placeholder"Label of the field" />
+      placeholder="Label of the field" />
   </div>
 
   <div class="form-group">
@@ -35,8 +36,7 @@
       kendoTextBox
       #fieldPlaceholder
       formControlName="placeholder"
-      placeholder"Placeholder of the field"
-       />
+      placeholder="Placeholder of the field" />
   </div>
 
   <button kendoButton type="submit" [primary]="true">Add Field</button>
