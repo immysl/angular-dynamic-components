@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { DynamicFieldConfig } from '../../models/dynamic-field-config';
+import { FieldConfig } from '../../../shared/models/field-config';
 
 @Component({
   selector: 'app-form-select',
@@ -9,7 +9,7 @@ import { DynamicFieldConfig } from '../../models/dynamic-field-config';
   styleUrls: ['./form-select.component.scss']
 })
 export class FormSelectComponent implements OnInit {
-  config: DynamicFieldConfig;
+  config: FieldConfig;
   group: FormGroup;
 
   constructor() { }

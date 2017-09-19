@@ -1,16 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { FieldList } from '../dynamic-form/models/field-list';
+import { FieldList } from '../shared/models/field-list';
 import { CommonStore } from '../shared/common-store';
 import { State } from '../shared/models/state';
 
 @Component({
-  selector: 'app-field-form',
-  templateUrl: './field-form.component.html',
-  styleUrls: ['./field-form.component.scss']
+  selector: 'app-form-inventory',
+  templateUrl: './form-inventory.component.html',
+  styleUrls: ['./form-inventory.component.scss']
 })
-export class FieldFormComponent implements OnInit {
+export class FormInventoryComponent implements OnInit {
   fieldList: Array<string>;
   form: FormGroup;
 
