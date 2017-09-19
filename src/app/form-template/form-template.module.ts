@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
+import { FormInventoryModule } from '../form-inventory/form-inventory.module';
 import { DynamicFormModule } from '../dynamic-form/dynamic-form.module';
 
 import { FormTemplateComponent } from './form-template/form-template.component';
 
 @NgModule({
   imports: [
-    CommonModule,
+    FormInventoryModule,
     DynamicFormModule
   ],
   declarations: [FormTemplateComponent],
