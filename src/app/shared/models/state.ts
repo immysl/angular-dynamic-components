@@ -1,5 +1,5 @@
-import { DynamicFieldConfig } from '../../dynamic-form/models/dynamic-field-config';
+import { FieldConfig } from '../../shared/models/field-config';
 
 export interface State {
-    formConfigList: DynamicFieldConfig[];
+    formConfigList: FieldConfig[];
 }
