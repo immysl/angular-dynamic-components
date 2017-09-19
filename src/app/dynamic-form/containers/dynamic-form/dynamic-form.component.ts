@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { DataService } from '../../../shared/data.service';
 import { CommonStore } from '../../../shared/common-store';
 
-import { DynamicFieldConfig } from '../../models/dynamic-field-config';
+import { FieldConfig } from '../../../shared/models/field-config';
 import { State } from '../../../shared/models/state';
 
 @Component({
@@ -16,7 +16,7 @@ export class DynamicFormComponent implements OnInit {
   @Output() submitted: EventEmitter<any> = new EventEmitter<any>();
 
   form: FormGroup;
-  configList: DynamicFieldConfig[];
+  configList: FieldConfig[];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -32,7 +32,7 @@ export class DynamicFormComponent implements OnInit {
   getConfigList() {
     this.dataService
       .getSimpleForm()
-      .subscribe((data: DynamicFieldConfig[]) => {
+      .subscribe((data: FieldConfig[]) => {
         const currentState: State = this.commonStore.getState();
 
         // update formConfigList in an immutable way
@@ -56,7 +56,7 @@ export class DynamicFormComponent implements OnInit {
   createGroup(): FormGroup {
     const group = this.formBuilder.group({});
 
-    this.configList.forEach((control: DynamicFieldConfig) =>
+    this.configList.forEach((control: FieldConfig) =>
       group.addControl(
         control.name,
         this.formBuilder.control('')
